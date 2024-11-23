@@ -37,6 +37,8 @@ pkgs:
   libdrm
   mesa.drivers
 
+  mesa # for libgdm, required by Simulink
+
   gcc
   gfortran
 
