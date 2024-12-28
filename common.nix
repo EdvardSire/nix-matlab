@@ -29,6 +29,7 @@ pkgs:
   procps
   unzip
   zlib
+  linux-pam
 
   # These packages are needed since 2021b version
   gtk2
