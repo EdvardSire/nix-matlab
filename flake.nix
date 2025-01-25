@@ -108,7 +108,7 @@
     };
   in {
 
-    packages.x86_64-linux.matlab = pkgs.buildFHSUserEnv {
+    packages.x86_64-linux.matlab = pkgs.buildFHSEnv {
       name = "matlab";
       inherit targetPkgs;
       extraInstallCommands = ''
@@ -132,7 +132,7 @@
         description = "Matlab itself - the GUI launcher";
       };
     };
-    packages.x86_64-linux.matlab-shell = pkgs.buildFHSUserEnv {
+    packages.x86_64-linux.matlab-shell = pkgs.buildFHSEnv {
       name = "matlab-shell";
       inherit targetPkgs;
       runScript = pkgs.writeScript "matlab-shell-runner" (
@@ -187,7 +187,7 @@
         description = "Matlab engine for python - Nix package, slightly patched for a Nix installation";
       };
     };
-    packages.x86_64-linux.matlab-python-shell = pkgs.buildFHSUserEnv {
+    packages.x86_64-linux.matlab-python-shell = pkgs.buildFHSEnv {
       name = "matlab-python-shell";
       inherit targetPkgs;
       runScript = pkgs.writeScript "matlab-python-shell-runner" (shellHooksCommon + ''
@@ -199,7 +199,7 @@
         description = "A python shell from which you can use matlab's python engine";
       };
     };
-    packages.x86_64-linux.matlab-mlint = pkgs.buildFHSUserEnv {
+    packages.x86_64-linux.matlab-mlint = pkgs.buildFHSEnv {
       name = "mlint";
       inherit targetPkgs;
       runScript = pkgs.writeScript "matlab-mlint-runner" ((runScriptPrefix {}) + ''
@@ -210,7 +210,7 @@
         description = "Check MATLAB code files for possible problems";
       };
     };
-    packages.x86_64-linux.matlab-mex = pkgs.buildFHSUserEnv {
+    packages.x86_64-linux.matlab-mex = pkgs.buildFHSEnv {
       name = "mex";
       inherit targetPkgs;
       runScript = pkgs.writeScript "matlab-mex-runner" ((runScriptPrefix {}) + ''
